@@ -40,6 +40,14 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
     {
+        title: "Kicko",
+        description: "User-friendly shoe-selling web app with search, filters, wishlist, cart, and dummy checkout.",
+        image: "/images/kicko.png", // External image
+        github: "https://github.com/Vishnu-11124/Kicko",
+        live: "https://kicko-7dsr.vercel.app/",
+        badges: ["React", "JavaScript", "Tailwind"],
+    },
+    {
         company: "Zidio Development",
         role: "Web Development Intern",
         description: "Web development is the process of building, programming...",
@@ -92,13 +100,6 @@ export const PROJECTS = [
         github: "#",
         live: "#",
         badges: ["React", "DnD Kit", "Tailwind"],
-    },
-    {
-        title: "Task Manager",
-        description: "Productivity app with drag-and-drop functionality",
-        image: "https://images.pexels.com/photos/32405729/pexels-photo-32405729.jpeg", // External image
-        github: "#",
-        live: "#",
-        badges: ["React", "DnD Kit", "Tailwind"],
     }
+    
 ];
