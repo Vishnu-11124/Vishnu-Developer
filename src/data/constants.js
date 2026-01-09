@@ -39,14 +39,7 @@ export const EDUCATION = [
 ];
 
 export const EXPERIENCE = [
-    {
-        title: "Kicko",
-        description: "User-friendly shoe-selling web app with search, filters, wishlist, cart, and dummy checkout.",
-        image: "/images/kicko.png", // External image
-        github: "https://github.com/Vishnu-11124/Kicko",
-        live: "https://kicko-7dsr.vercel.app/",
-        badges: ["React", "JavaScript", "Tailwind"],
-    },
+    
     {
         company: "Zidio Development",
         role: "Web Development Intern",
@@ -57,6 +50,14 @@ export const EXPERIENCE = [
 ];
 
 export const PROJECTS = [
+    {
+        title: "Kicko",
+        description: "User-friendly shoe-selling web app with search, filters, wishlist, cart, and dummy checkout.",
+        image: "/images/projects/Kicko.png", // External image
+        github: "https://github.com/Vishnu-11124/Kicko",
+        live: "https://kicko-7dsr.vercel.app/",
+        badges: ["React", "JavaScript", "Tailwind"],
+    },
     {
         title: "Modern Calculator",
         description: "A sleek, responsive calculator with modern UI and smooth animations",
