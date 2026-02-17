@@ -19,6 +19,11 @@ export const SKILLS = [
     { name: "Canva", icon: "/images/skills/canva.png", width: "w-9" },
     { name: "MySql", icon: "/images/skills/mysql.png", width: "w-8" },
     { name: "C", icon: "/images/skills/c.png", width: "w-11" },
+    { name: "React", icon: "/images/skills/react.jpeg", width: "w-9" },
+    { name: "NodeJS", icon: "/images/skills/node.jpeg", width: "w-9" },
+    { name: "ExpressJS", icon: "/images/skills/express.jpeg", width: "w-9" },
+    { name: "MongoDB", icon: "/images/skills/mongodb.jpeg", width: "w-9" },
+    { name: "Postman", icon: "/images/skills/postman.jpeg", width: "w-9" },
 ];
 
 export const EDUCATION = [
@@ -39,12 +44,20 @@ export const EDUCATION = [
 ];
 
 export const EXPERIENCE = [
-    
+    {
+        company: "Alpha Innovation",
+        role: "Web Development Intern",
+        duration: "08/2025 - 12/2025",
+        description: "Web development is the process of building, programming...",
+        logo: "/images/experience/alpha.jpeg",
+        link: "https://www.alphainnovation.in/",
+    },
     {
         company: "Zidio Development",
         role: "Web Development Intern",
+        duration: "03/2025 - 06/2025",
         description: "Web development is the process of building, programming...",
-        logo: "/images/zidio.png",
+        logo: "/images/experience/zidio.png",
         link: "#",
     },
 ];

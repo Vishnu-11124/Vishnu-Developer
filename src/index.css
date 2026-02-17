@@ -262,3 +262,8 @@ body {
 .tech-badge {
   transform: translateY(10px);
 }
+
+.dark{
+  color: white;
+  background-color: black;
+}

@@ -39,6 +39,9 @@ const Experience = () => {
                                     <h4 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">
                                         {exp.company}
                                     </h4>
+                                    <span className="inline-block text-sm text-gray-500 dark:text-gray-400 mb-2">
+                                        {exp.duration}
+                                    </span>
                                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 text-sm">
                                         {exp.description}
                                     </p>
