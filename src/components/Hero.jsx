@@ -28,7 +28,7 @@ const Hero = () => {
                     Contact Me
                 </a>
                 <a
-                    href="../../public/docs/Vishnu-T-S-Frontend-Developer.pdf"
+                    href="/docs/Vishnu-T-S-Frontend-Developer.pdf"
                     download
                     className="px-10 py-3 border rounded-full border-gray-500 text-black bg-gray-100 flex items-center gap-2 active:bg-white dark:text-black dark:border-white hover:scale-105 transition"
                 >
