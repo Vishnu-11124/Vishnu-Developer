@@ -64,6 +64,14 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "TaskFlow",
+        description: "TaskFlow is a modern, intuitive dashboard for efficiently organizing, tracking, and managing daily tasks.",
+        image: "/images/projects/TaskFlow.jpeg", // External image
+        github: "https://github.com/Vishnu-11124/TaskFlow",
+        live: "https://task-flow-eight-rose.vercel.app/",
+        badges: ["Next.js", "Tailwind", "TypeScript"],
+    },
+    {
         title: "Kicko",
         description: "User-friendly shoe-selling web app with search, filters, wishlist, cart, and dummy checkout.",
         image: "/images/projects/Kicko.png", // External image
@@ -106,14 +114,7 @@ export const PROJECTS = [
         github: "#",
         live: "#",
         badges: ["HTML", "CSS", "API"],
-    },
-    {
-        title: "Task Manager",
-        description: "Productivity app with drag-and-drop functionality",
-        image: "https://images.pexels.com/photos/32405729/pexels-photo-32405729.jpeg", // External image
-        github: "#",
-        live: "#",
-        badges: ["React", "DnD Kit", "Tailwind"],
     }
+    
     
 ];
