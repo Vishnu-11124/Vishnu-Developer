@@ -64,6 +64,14 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "ThreadVibe",
+        description: "ThreadVibe, a MERN-based t-shirt e-commerce platform with product browsing, cart, authentication, and order tracking.",
+        image: "/images/projects/ThreadVibe.png", // External image
+        github: "https://github.com/Vishnu-11124/ThreadVibe",
+        live: "https://thread-vibe-gamma.vercel.app/",
+        badges: ["React", "Tailwind", "NodeJS", "ExpressJS", "MongoDB", "Postman", "Redux"],
+    },
+    {
         title: "TaskFlow",
         description: "TaskFlow is a modern, intuitive dashboard for efficiently organizing, tracking, and managing daily tasks.",
         image: "/images/projects/TaskFlow.jpeg", // External image
