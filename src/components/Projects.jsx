@@ -1,10 +1,17 @@
 
 import React from "react";
+import { motion } from "framer-motion";
 import { PROJECTS } from "../data/constants";
 
 const Projects = () => {
     return (
-        <div id="work" className="w-full px-[5%] py-10 scroll-mt-20">
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            id="work" className="w-full px-[5%] py-10 scroll-mt-20"
+        >
             <h4 className="text-center mb-2 text-lg font-medium text-pink-600 dark:text-pink-400">
                 My Portfolio
             </h4>
@@ -18,9 +25,14 @@ const Projects = () => {
             {/* Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {PROJECTS.map((project, index) => (
-                    <div
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -10 }}
                         key={index}
-                        className="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+                        className="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-2xl transition-all duration-500"
                     >
 
                         {/* Image Container with Overlay */}
@@ -73,10 +85,10 @@ const Projects = () => {
                                 </div>
                             )}
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

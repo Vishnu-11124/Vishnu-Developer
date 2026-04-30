@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { NAV_LINKS } from "../data/constants";
 
 const Navbar = () => {
@@ -34,7 +35,12 @@ const Navbar = () => {
               - Centers the inner "Pill"
               - Adds padding to create the "float" effect
             */}
-            <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center py-4 px-4 transition-all duration-300">
+            <motion.nav 
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="fixed top-0 left-0 right-0 z-50 flex justify-center py-4 px-4 transition-all duration-300"
+            >
 
                 {/* 
                   The Floating Pill (Island):
@@ -114,7 +120,7 @@ const Navbar = () => {
                     </div>
 
                 </div>
-            </nav>
+            </motion.nav>
 
             {/* Mobile Menu Overlay */}
             <div

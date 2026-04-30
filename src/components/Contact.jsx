@@ -1,14 +1,27 @@
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
     return (
-        <div id="contact" className="w-full px-[5%] py-10 scroll-mt-20">
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            id="contact" className="w-full px-[5%] py-10 scroll-mt-20"
+        >
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
                     {/* Left Side: Info */}
-                    <div className="lg:w-1/2 flex flex-col justify-center">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="lg:w-1/2 flex flex-col justify-center"
+                    >
                         <h4 className="text-lg font-medium text-violet-600 dark:text-violet-400 mb-2">
                             Let's Connect
                         </h4>
@@ -33,10 +46,16 @@ const Contact = () => {
 
                             {/* Socials can go here */}
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Right Side: Form */}
-                    <div className="lg:w-1/2 bg-white dark:bg-gray-900 p-8 sm:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+                    <motion.div 
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="lg:w-1/2 bg-white dark:bg-gray-900 p-8 sm:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800 relative overflow-hidden"
+                    >
                         {/* Decorative blob */}
                         <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-violet-500/10 rounded-full blur-3xl"></div>
 
@@ -90,10 +109,10 @@ const Contact = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </button>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

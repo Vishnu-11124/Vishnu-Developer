@@ -1,17 +1,28 @@
 
 import React from "react";
+import { motion } from "framer-motion";
 import { EDUCATION } from "../data/constants";
 
 const Education = () => {
     return (
-        <div id="education" className="w-full px-[12%] py-10 scroll-mt-20">
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            id="education" className="w-full px-[12%] py-10 scroll-mt-20"
+        >
             <h2 className="text-center text-5xl font-Ovo dark:text-white mb-10">My Journey</h2>
 
             <div className="max-w-4xl mx-auto relative">
                 {/* Render Cards */}
                 <div className="grid grid-cols-1 gap-8">
                     {EDUCATION.map((edu, index) => (
-                        <div
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            viewport={{ once: true }}
                             key={index}
                             className="group relative"
                         >
@@ -45,11 +56,11 @@ const Education = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

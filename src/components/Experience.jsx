@@ -1,10 +1,17 @@
 
 import React from "react";
+import { motion } from "framer-motion";
 import { EXPERIENCE } from "../data/constants";
 
 const Experience = () => {
     return (
-        <div id="experience" className="w-full px-[12%] py-10 scroll-mt-20">
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            id="experience" className="w-full px-[12%] py-10 scroll-mt-20"
+        >
             <h4 className="text-center mb-2 text-lg font-medium text-blue-600 dark:text-blue-400">
                 Professional Path
             </h4>
@@ -15,7 +22,13 @@ const Experience = () => {
             <div className="max-w-4xl mx-auto relative">
                 <div className="grid grid-cols-1 gap-8">
                     {EXPERIENCE.map((exp, index) => (
-                        <div key={index} className="group relative">
+                        <motion.div 
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            viewport={{ once: true }}
+                            key={index} className="group relative"
+                        >
                             {/* Cyan/Blue Glow Effect */}
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500 group-hover:duration-200"></div>
 
@@ -68,11 +81,11 @@ const Experience = () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

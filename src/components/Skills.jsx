@@ -1,10 +1,17 @@
 
 import React from "react";
+import { motion } from "framer-motion";
 import { SKILLS } from "../data/constants";
 
 const Skills = () => {
     return (
-        <div id="skills" className="w-full px-[12%] py-10 scroll-mt-20">
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            id="skills" className="w-full px-[12%] py-10 scroll-mt-20"
+        >
             <h4 className="text-center mb-2 text-lg font-medium text-indigo-600 dark:text-indigo-400">
                 My Arsenal
             </h4>
@@ -14,12 +21,17 @@ const Skills = () => {
 
             {/* Responsive Layout: Flex (Tags) on Mobile, Grid (Cards) on Desktop */}
             <div className="flex flex-wrap justify-center gap-3 sm:gap-6 sm:grid sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] max-w-6xl mx-auto">
-                {SKILLS.map((skill) => (
-                    <div
+                {SKILLS.map((skill, index) => (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
                         key={skill.name}
                         className="group relative bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 
             hover:border-indigo-500 dark:hover:border-indigo-500 transition-all duration-300 
-            hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2 
+            hover:shadow-xl 
             
             /* Mobile Styles: Pill Shape */
             rounded-full px-5 py-2.5 flex items-center justify-center
@@ -44,14 +56,20 @@ const Skills = () => {
                         <h3 className="relative z-10 font-medium text-sm sm:text-base text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                             {skill.name}
                         </h3>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 
-            <p className="text-center text-gray-500 dark:text-gray-400 mt-12 text-sm">
+            <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center text-gray-500 dark:text-gray-400 mt-12 text-sm"
+            >
                 Constantly learning and expanding my toolset...
-            </p>
-        </div>
+            </motion.p>
+        </motion.div>
     );
 };
 
