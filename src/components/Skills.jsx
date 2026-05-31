@@ -1,76 +1,172 @@
-
 import React from "react";
 import { motion } from "framer-motion";
-import { SKILLS } from "../data/constants";
+import {
+  FaJs, FaPython, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub,
+} from "react-icons/fa";
+import {
+  SiReact, SiRedux, SiTailwindcss, SiBootstrap,
+  SiNodedotjs, SiExpress, SiMongodb, SiMysql,
+  SiPostman, SiCanva,
+} from "react-icons/si";
+
+const SKILL_CATEGORIES = [
+  {
+    category: "Frontend Development",
+    color: "#0ea5e9",
+    bg: "#e0f2fe",
+    skills: [
+      { name: "React", icon: SiReact },
+      { name: "Redux Toolkit", icon: SiRedux },
+      { name: "RTK Query", icon: SiRedux },
+      { name: "JavaScript", icon: FaJs },
+      { name: "HTML", icon: FaHtml5 },
+      { name: "CSS", icon: FaCss3Alt },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Bootstrap", icon: SiBootstrap },
+    ],
+  },
+  {
+    category: "Languages & Backend",
+    color: "#6366f1",
+    bg: "#eef2ff",
+    skills: [
+      { name: "JavaScript", icon: FaJs },
+      { name: "Python", icon: FaPython },
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express.js", icon: SiExpress },
+    ],
+  },
+  {
+    category: "Databases & Tools",
+    color: "#10b981",
+    bg: "#d1fae5",
+    skills: [
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Git", icon: FaGitAlt },
+      { name: "GitHub", icon: FaGithub },
+      { name: "Postman", icon: SiPostman },
+      { name: "Canva", icon: SiCanva },
+    ],
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+const skillVariants = {
+  hidden: { opacity: 0, scale: 0.85 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+};
 
 const Skills = () => {
-    return (
-        <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            id="skills" className="w-full px-[12%] py-10 scroll-mt-20"
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      id="skills"
+      className="w-full px-[6%] md:px-[12%] py-16 scroll-mt-20"
+    >
+      {/* Section heading */}
+      <h4 className="text-center mb-2 text-lg font-medium text-indigo-600 dark:text-indigo-400 tracking-widest uppercase text-sm">
+        My Arsenal
+      </h4>
+      <h2 className="text-center text-4xl md:text-5xl font-Ovo dark:text-white mb-3">
+        Skills & Tools
+      </h2>
+      <p className="text-center text-gray-400 dark:text-gray-500 text-sm mb-14">
+        Organized by what I actually use to build things.
+      </p>
+
+      {/* Categories */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex flex-col gap-5 max-w-5xl mx-auto"
+      >
+        {/* Frontend — full width */}
+        <motion.div
+          variants={cardVariants}
+          className="rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
         >
-            <h4 className="text-center mb-2 text-lg font-medium text-indigo-600 dark:text-indigo-400">
-                My Arsenal
-            </h4>
-            <h2 className="text-center text-5xl font-Ovo dark:text-white mb-12">
-                Skills & Tools
-            </h2>
-
-            {/* Responsive Layout: Flex (Tags) on Mobile, Grid (Cards) on Desktop */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-6 sm:grid sm:grid-cols-[repeat(auto-fill,minmax(140px,1fr))] max-w-6xl mx-auto">
-                {SKILLS.map((skill, index) => (
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        whileHover={{ y: -5 }}
-                        key={skill.name}
-                        className="group relative bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 
-            hover:border-indigo-500 dark:hover:border-indigo-500 transition-all duration-300 
-            hover:shadow-xl 
-            
-            /* Mobile Styles: Pill Shape */
-            rounded-full px-5 py-2.5 flex items-center justify-center
-            
-            /* Desktop Styles: Card Shape */
-            sm:rounded-2xl sm:p-6 sm:flex-col sm:gap-4"
-                    >
-                        {/* Hover Glow Effect */}
-                        <div className="absolute inset-0 bg-indigo-500/5 sm:rounded-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:bg-indigo-500/10"></div>
-
-                        {/* Icon - Hidden on Mobile */}
-                        <div className="hidden sm:block relative z-10 p-2 bg-gray-50 dark:bg-gray-700/50 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700 transition-colors">
-                            <img
-                                loading="lazy"
-                                src={skill.icon}
-                                className={`${skill.width} h-12 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300`}
-                                alt={skill.name}
-                            />
-                        </div>
-
-                        {/* Name */}
-                        <h3 className="relative z-10 font-medium text-sm sm:text-base text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                            {skill.name}
-                        </h3>
-                    </motion.div>
-                ))}
-            </div>
-
-            <motion.p 
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center text-gray-500 dark:text-gray-400 mt-12 text-sm"
-            >
-                Constantly learning and expanding my toolset...
-            </motion.p>
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="h-2 w-2 rounded-full shrink-0" style={{ backgroundColor: SKILL_CATEGORIES[0].color }} />
+            <h3 className="text-sm font-semibold tracking-wide uppercase" style={{ color: SKILL_CATEGORIES[0].color }}>
+              {SKILL_CATEGORIES[0].category}
+            </h3>
+          </div>
+          <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap gap-2">
+            {SKILL_CATEGORIES[0].skills.map((skill) => (
+              <motion.div
+                key={skill.name}
+                variants={skillVariants}
+                whileHover={{ y: -2, scale: 1.04 }}
+                className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 cursor-default transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+                style={{ backgroundColor: SKILL_CATEGORIES[0].bg }}
+              >
+                <skill.icon size={15} style={{ color: SKILL_CATEGORIES[0].color }} className="shrink-0" />
+                {skill.name}
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
-    );
+
+        {/* Bottom two — side by side on md+ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {SKILL_CATEGORIES.slice(1).map((cat) => (
+            <motion.div
+              key={cat.category}
+              variants={cardVariants}
+              className="rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="h-2 w-2 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
+                <h3 className="text-sm font-semibold tracking-wide uppercase" style={{ color: cat.color }}>
+                  {cat.category}
+                </h3>
+              </div>
+              <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap gap-2">
+                {cat.skills.map((skill) => (
+                  <motion.div
+                    key={skill.name}
+                    variants={skillVariants}
+                    whileHover={{ y: -2, scale: 1.04 }}
+                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 cursor-default transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+                    style={{ backgroundColor: cat.bg }}
+                  >
+                    <skill.icon size={15} style={{ color: cat.color }} className="shrink-0" />
+                    {skill.name}
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Footer note */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="text-center text-gray-400 dark:text-gray-500 mt-12 text-sm"
+      >
+        Constantly learning and expanding my toolset...
+      </motion.p>
+    </motion.div>
+  );
 };
 
 export default Skills;
