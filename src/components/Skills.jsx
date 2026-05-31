@@ -77,7 +77,7 @@ const Skills = () => {
       className="w-full px-[6%] md:px-[12%] py-16 scroll-mt-20"
     >
       {/* Section heading */}
-      <h4 className="text-center mb-2 text-lg font-medium text-indigo-600 dark:text-indigo-400 tracking-widest uppercase text-sm">
+      <h4 className="text-center mb-2 text-lg font-medium text-indigo-600 dark:text-indigo-400 tracking-widest uppercase">
         My Arsenal
       </h4>
       <h2 className="text-center text-4xl md:text-5xl font-Ovo dark:text-white mb-3">
