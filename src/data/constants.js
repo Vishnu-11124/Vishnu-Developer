@@ -1,24 +1,29 @@
 import {
-  FaHtml5,
-  FaCss3Alt,
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiRedux,
+  SiTailwindcss,
+  SiBootstrap,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiPostman,
+  SiShadcnui,
+} from "react-icons/si";
+
+import {
   FaJs,
   FaPython,
+  FaHtml5,
+  FaCss3Alt,
   FaGitAlt,
   FaGithub,
 } from "react-icons/fa";
 
-import {
-  SiReact,
-  SiRedux,
-  SiMongodb,
-  SiExpress,
-  SiMysql,
-  SiTailwindcss,
-  SiBootstrap,
-  SiPostman,
-  SiNodedotjs,
-  SiCanva,
-} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+import { RiShieldKeyholeLine } from "react-icons/ri";
 
 export const NAV_LINKS = [
   { label: "Home", href: "#" },
@@ -30,41 +35,41 @@ export const NAV_LINKS = [
 export const SKILL_CATEGORIES = [
   {
     category: "Frontend Development",
-    color: "#0ea5e9",
-    bg: "#e0f2fe",
+    theme: "violet",
     skills: [
       { name: "React", icon: SiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "Redux Toolkit", icon: SiRedux },
       { name: "RTK Query", icon: SiRedux },
-      { name: "JavaScript", icon: FaJs },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "shadcn/ui", icon: SiReact },
       { name: "HTML", icon: FaHtml5 },
       { name: "CSS", icon: FaCss3Alt },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Bootstrap", icon: SiBootstrap },
     ],
   },
   {
-    category: "Languages & Backend",
-    color: "#6366f1",
-    bg: "#eef2ff",
+    category: "Backend Development",
+    theme: "blue",
     skills: [
-      { name: "JavaScript", icon: FaJs },
-      { name: "Python", icon: FaPython },
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Express.js", icon: SiExpress },
+      { name: "REST APIs", icon: TbApi },
+      { name: "JWT Auth", icon: RiShieldKeyholeLine },
     ],
   },
   {
-    category: "Databases & Tools",
-    color: "#10b981",
-    bg: "#d1fae5",
+    category: "Languages, Databases & Tools",
+    theme: "emerald",
     skills: [
+      { name: "JavaScript", icon: FaJs },
+      { name: "Python", icon: FaPython },
       { name: "MongoDB", icon: SiMongodb },
       { name: "MySQL", icon: SiMysql },
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
       { name: "Postman", icon: SiPostman },
-      { name: "Canva", icon: SiCanva },
     ],
   },
 ];

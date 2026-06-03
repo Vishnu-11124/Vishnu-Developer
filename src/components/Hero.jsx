@@ -27,7 +27,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-3xl sm:text-6xl lg:text-[50px] font-bold dark:text-white"
             >
-                Frontend Web Developer
+                Frontend  Developer
             </motion.h1>
             <motion.p 
                 initial={{ opacity: 0 }}
@@ -35,8 +35,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="max-w-2xl mx-auto dark:text-gray-300"
             >
-                I am a frontend developer from Kannur with a Master’s in Computer
-                Applications (MCA).
+                I build responsive, user-friendly web applications using React.js, TypeScript, Next.js, Tailwind CSS, and MERN stack technologies.
             </motion.p>
 
             <motion.div 
