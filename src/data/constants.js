@@ -77,34 +77,68 @@ export const SKILL_CATEGORIES = [
 export const EDUCATION = [
   {
     institution: "Kannur University",
-    degree: "MCA",
-    years: "2023 - 2025",
     college: "Chinmaya Institute of Technology",
+    degree: "Master of Computer Applications (MCA)",
+    duration: "2023 - 2025",
+    location: "Kannur, Kerala",
+    description:
+      "Focused on advanced software development, web technologies, and system design.",
+    highlights: [
+      "Full Stack Web Development",
+      "Data Structures & Algorithms",
+      "Software Engineering",
+      "Database Management Systems",
+    ],
     logo: "/images/logo.jpg",
   },
   {
     institution: "Kannur University",
-    degree: "Bsc CS",
-    years: "2020 - 2023",
     college: "Taliparamba Arts & Science College",
+    degree: "BSc Computer Science",
+    duration: "2020 - 2023",
+    location: "Kannur, Kerala",
+    description:
+      "Built strong fundamentals in programming, databases, and computer science theory.",
+    highlights: [
+      "Programming Fundamentals",
+      "Object Oriented Programming",
+      "Operating Systems",
+      "Computer Networks",
+    ],
     logo: "/images/logo.jpg",
-  },
+  }
 ];
 
 export const EXPERIENCE = [
   {
     company: "Alpha Innovation",
     role: "Web Development Intern",
-    duration: "08/2025 - 12/2025",
-    description: "Web development is the process of building, programming...",
+    duration: "Aug 2025 - Dec 2025",
+    location: "Remote",
+    description:
+      "Worked on building and improving web applications with modern frontend and backend technologies.",
+    highlights: [
+      "Developed responsive UI components using React",
+      "Worked with REST APIs integration",
+      "Improved UI performance and usability",
+    ],
+    techStack: ["React", "JavaScript", "Tailwind CSS"],
     logo: "/images/experience/alpha.jpeg",
     link: "https://www.alphainnovation.in/",
   },
   {
     company: "Zidio Development",
     role: "Web Development Intern",
-    duration: "03/2025 - 06/2025",
-    description: "Web development is the process of building, programming...",
+    duration: "Mar 2025 - Jun 2025",
+    location: "Remote",
+    description:
+      "Contributed to frontend development and learned real-world project workflows in a team environment.",
+    highlights: [
+      "Built reusable UI components",
+      "Worked with API integration",
+      "Participated in code reviews and debugging",
+    ],
+    techStack: ["React", "JavaScript", "Tailwind CSS", "Redux Toolkit", "RTK Query"],
     logo: "/images/experience/zidio.png",
     link: "#",
   },

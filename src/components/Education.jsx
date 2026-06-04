@@ -1,67 +1,115 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { EDUCATION } from "../data/constants";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Education = () => {
-    return (
-        <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            id="education" className="w-full px-[12%] py-10 scroll-mt-20"
-        >
-            <h2 className="text-center text-5xl font-Ovo dark:text-white mb-10">My Journey</h2>
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      id="education"
+      className="w-full px-[12%] py-16 scroll-mt-20"
+    >
+      {/* Heading */}
+      <h2 className="text-center text-4xl md:text-5xl font-Ovo dark:text-white mb-14">
+        My Journey
+      </h2>
 
-            <div className="max-w-4xl mx-auto relative">
-                {/* Render Cards */}
-                <div className="grid grid-cols-1 gap-8">
-                    {EDUCATION.map((edu, index) => (
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.2 }}
-                            viewport={{ once: true }}
-                            key={index}
-                            className="group relative"
+      <div className="max-w-5xl mx-auto relative">
+        {/* Timeline line */}
+        <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-gray-200 dark:bg-gray-700 -translate-x-1/2" />
+
+        <div className="flex flex-col gap-12">
+          {EDUCATION.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className={`relative flex w-full ${
+                index % 2 === 0
+                  ? "md:justify-start"
+                  : "md:justify-end"
+              }`}
+            >
+              {/* Timeline dot */}
+              <div className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-gray-900" />
+
+              {/* Card */}
+              <div className="group w-full md:w-[48%] relative">
+                {/* Glow border */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
+
+                <div className="relative bg-white dark:bg-gray-900 rounded-2xl p-6 md:p-8 shadow-sm">
+
+                  {/* Top */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <img
+                      src={edu.logo}
+                      alt={edu.institution}
+                      className="w-12 h-12 rounded-full object-cover border border-gray-200 dark:border-gray-700"
+                    />
+
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                        {edu.degree}
+                      </h3>
+
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        {edu.college}
+                      </p>
+
+                      <p className="text-xs text-gray-400">
+                        {edu.institution}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Duration */}
+                  <span className="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-300">
+                    {edu.duration}
+                  </span>
+
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                    {edu.description}
+                  </p>
+
+                  {/* Highlights */}
+                  <div className="mb-4">
+                    <p className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">
+                      Highlights
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {edu.highlights.map((item, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-1 text-xs rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
                         >
-                            {/* Animated Gradient Border Background */}
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500 group-hover:duration-200"></div>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-                            {/* Card Content */}
-                            <div className="relative flex flex-col md:flex-row items-center md:items-start gap-6 bg-white dark:bg-gray-900 p-8 rounded-2xl leading-none">
-
-                                {/* Logo Section */}
-                                <div className="flex-shrink-0 p-3 bg-gray-50 dark:bg-gray-800 rounded-full border border-gray-100 dark:border-gray-700 shadow-sm">
-                                    <img loading="lazy" src={edu.logo} className="w-12 h-12 object-contain rounded-full" alt={edu.institution} />
-                                </div>
-
-                                {/* Text Content */}
-                                <div className="flex-1 text-center md:text-left">
-                                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                                        <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-                                            {edu.degree}
-                                        </h3>
-                                        <span className="px-3 py-1 text-xs font-semibold text-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 dark:text-indigo-300 rounded-full w-max mx-auto md:mx-0">
-                                            {edu.years}
-                                        </span>
-                                    </div>
-
-                                    <h4 className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                        {edu.institution}
-                                    </h4>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400 font-light">
-                                        {edu.college}
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                  {/* Location */}
+                  <div className="flex items-center gap-2 text-xs text-gray-400">
+                    <FaMapMarkerAlt />
+                    {edu.location}
+                  </div>
                 </div>
-            </div>
-        </motion.div>
-    );
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
 };
 
 export default Education;
