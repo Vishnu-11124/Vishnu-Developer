@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { NAV_LINKS } from "../data/constants";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -58,11 +59,11 @@ const Navbar = () => {
                 `}>
 
                     {/* Left: Logo */}
-                    <a href="#" className="flex items-center gap-1 group z-20">
+                    <Link to="/" className="flex items-center gap-1 group z-20">
                         <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white font-Ovo group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                             Vishnu<span className="text-indigo-600 dark:text-indigo-400">.</span>
                         </span>
-                    </a>
+                    </Link>
 
                     {/* Center: Navigation Links (Absolute Centered) */}
                     <ul className="hidden md:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

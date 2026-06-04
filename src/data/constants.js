@@ -26,7 +26,7 @@ import { TbApi } from "react-icons/tb";
 import { RiShieldKeyholeLine } from "react-icons/ri";
 
 export const NAV_LINKS = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "About Me", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "My Work", href: "#work" },
@@ -146,79 +146,127 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
-    title: "ThreadVibe",
+    id: "threadvibe",
+    image: "/images/projects/ThreadVibe.png",
+    name: "ThreadVibe",
     description:
-      "ThreadVibe, a MERN-based t-shirt e-commerce platform with product browsing, cart, authentication, and order tracking.",
-    image: "/images/projects/ThreadVibe.png", // External image
-    github: "https://github.com/Vishnu-11124/ThreadVibe",
-    live: "https://thread-vibe-gamma.vercel.app/",
-    badges: [
+      "MERN-based t-shirt e-commerce platform with cart, authentication, and order tracking.",
+
+    techTags: [
       "React",
-      "Tailwind",
-      "NodeJS",
-      "ExpressJS",
-      "MongoDB",
-      "Postman",
       "Redux",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS"
     ],
+
+    overview:
+      "ThreadVibe is a full-stack e-commerce platform built using the MERN stack for browsing products, managing cart, authentication, and order tracking.",
+
+    problem:
+      "Small clothing sellers lack an easy-to-use digital platform to sell and manage products online.",
+
+    solution:
+      "Built a scalable e-commerce system with authentication, product listing, cart management, and order tracking.",
+
+    features: [
+      "User authentication (JWT)",
+      "Product browsing & filtering",
+      "Cart management system",
+      "Order tracking",
+      "Responsive UI"
+    ],
+
+    challenges: [
+      "Managing global state for cart using Redux",
+      "Handling secure authentication flow",
+      "Optimizing API calls for performance"
+    ],
+
+    learnings: [
+      "Redux state management patterns",
+      "JWT authentication flow",
+      "REST API design",
+      "Full-stack project architecture"
+    ],
+
+    github: "https://github.com/Vishnu-11124/ThreadVibe",
+    live: "https://thread-vibe-gamma.vercel.app/"
   },
+
   {
-    title: "TaskFlow",
+    id: "taskflow",
+    image: "/images/projects/TaskFlow.jpeg",
+    name: "TaskFlow",
     description:
-      "TaskFlow is a modern, intuitive dashboard for efficiently organizing, tracking, and managing daily tasks.",
-    image: "/images/projects/TaskFlow.jpeg", // External image
+      "Modern task management dashboard for organizing and tracking daily tasks.",
+
+    techTags: ["Next.js", "TypeScript", "Tailwind CSS"],
+
+    overview:
+      "TaskFlow is a productivity tool designed to help users organize, track, and manage tasks efficiently.",
+
+    problem:
+      "Users need a simple and modern way to manage daily tasks without complexity.",
+
+    solution:
+      "Built a clean and intuitive task management system with smooth UX and fast interactions.",
+
+    features: [
+      "Task creation & deletion",
+      "Task status tracking",
+      "Responsive dashboard UI"
+    ],
+
+    challenges: [
+      "Designing minimal UI without losing usability"
+    ],
+
+    learnings: [
+      "Next.js routing system",
+      "Component-based architecture"
+    ],
+
     github: "https://github.com/Vishnu-11124/TaskFlow",
-    live: "https://task-flow-eight-rose.vercel.app/",
-    badges: ["Next.js", "Tailwind", "TypeScript"],
+    live: "https://task-flow-eight-rose.vercel.app/"
   },
+
   {
-    title: "Kicko",
+    id: "kicko",
+    image: "/images/projects/Kicko.png",
+    name: "Kicko",
     description:
-      "User-friendly shoe-selling web app with search, filters, wishlist, cart, and dummy checkout.",
-    image: "/images/projects/Kicko.png", // External image
+      "Shoe e-commerce web app with search, filters, wishlist, cart, and checkout.",
+
+    techTags: ["React", "JavaScript", "Tailwind CSS"],
+
+    overview:
+      "Kicko is a frontend-focused e-commerce web app for browsing shoes with filtering, wishlist, and cart features.",
+
+    problem:
+      "Users need a simple shopping experience for browsing and selecting shoes online.",
+
+    solution:
+      "Built a responsive frontend e-commerce UI with filtering and cart functionality.",
+
+    features: [
+      "Product search & filtering",
+      "Wishlist system",
+      "Cart management",
+      "Responsive design"
+    ],
+
+    challenges: [
+      "Managing UI state for cart and wishlist"
+    ],
+
+    learnings: [
+      "React state management",
+      "Component reusability"
+    ],
+
     github: "https://github.com/Vishnu-11124/Kicko",
-    live: "https://kicko-7dsr.vercel.app/",
-    badges: ["React", "JavaScript", "Tailwind"],
-  },
-  {
-    title: "Modern Calculator",
-    description:
-      "A sleek, responsive calculator with modern UI and smooth animations",
-    image: "/images/projects/Calculator.png",
-    github: "https://github.com/Vishnu-11124/Calculator",
-    live: "https://calculator-delta-two-99.vercel.app/",
-  },
-  {
-    title: "TrackFit",
-    description:
-      "TrackFit shows accurate results and clearly displays whether the user is underweight, normal, overweight, or obese.",
-    image: "/images/projects/TrackFit.png",
-    github: "https://github.com/Vishnu-11124/TrackFit",
-    live: "https://track-fit-amber.vercel.app/",
-  },
-  {
-    title: "Guessify",
-    description:
-      "An interactive number guessing game with 10 chances to find the secret number between 1-100, featuring instant feedback to guide your way!",
-    image: "/images/projects/Guessify.png",
-    github: "https://github.com/Vishnu-11124/Guessify",
-    live: "https://guessify-omega.vercel.app/",
-  },
-  {
-    title: "Noteo",
-    description:
-      "A task management tool designed to organize and prioritize daily activities.",
-    image: "/images/projects/Noteo.png",
-    github: "https://github.com/Vishnu-11124/Noteo",
-    live: "https://noteo-three.vercel.app/",
-  },
-  {
-    title: "Weather App",
-    description: "Real-time weather application with geolocation features",
-    image:
-      "https://images.pexels.com/photos/25988093/pexels-photo-25988093.jpeg", // External image
-    github: "#",
-    live: "#",
-    badges: ["HTML", "CSS", "API"],
-  },
+    live: "https://kicko-7dsr.vercel.app/"
+  }
 ];
