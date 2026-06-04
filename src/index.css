@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: "DM Serif Text", serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /* Splash screen */
@@ -261,9 +261,4 @@ body {
 
 .tech-badge {
   transform: translateY(10px);
-}
-
-.dark{
-  color: white;
-  background-color: black;
 }

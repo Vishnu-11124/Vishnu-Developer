@@ -55,7 +55,7 @@ const SkillCard = ({ cat }) => {
   return (
     <motion.div
       variants={cardVariants}
-      className="rounded-2xl p-5 border border-gray-200 dark:border-[#221e38] bg-white dark:bg-[#0e0c18] hover:border-violet-300 dark:hover:border-[#3d2f72] transition-colors duration-200"
+      className="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300"
     >
       <div className="flex items-center gap-2 mb-4">
         <div className={`w-2 h-2 rounded-full shrink-0 ${t.dot}`} />
@@ -87,13 +87,13 @@ const Skills = () => (
     viewport={{ once: true }}
     className="w-full px-[6%] md:px-[12%] py-16 scroll-mt-20"
   >
-    <p className="text-center text-xl font-medium tracking-[0.12em] uppercase text-violet-600 dark:text-violet-600 mb-2">
+    <p className="text-center text-sm font-semibold tracking-widest uppercase text-slate-500 dark:text-slate-500 mb-2">
       My Arsenal
     </p>
-    <h2 className="text-center text-4xl md:text-5xl font-Ovo  dark:text-white mb-2">
+    <h2 className="text-center text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
       Skills & Tools
     </h2>
-    <p className="text-center text-[13px]  dark:text-white mb-12">
+    <p className="text-center text-sm text-slate-500 dark:text-slate-400 mb-12">
       Organized by what I actually use to build things.
     </p>
 
@@ -117,7 +117,7 @@ const Skills = () => (
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.4 }}
       viewport={{ once: true }}
-      className="text-center text-[12px]  dark:text-white mt-10 tracking-wide"
+      className="text-center text-sm text-slate-400 dark:text-slate-500 mt-10 tracking-wide"
     >
       Constantly learning and expanding my toolset...
     </motion.p>

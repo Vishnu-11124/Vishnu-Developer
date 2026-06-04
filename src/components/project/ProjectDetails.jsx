@@ -21,10 +21,10 @@ const ProjectDetails = () => {
 
       {/* HEADER */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold dark:text-white">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
           {project.name}
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 mt-3 max-w-2xl mx-auto">
+        <p className="text-slate-500 dark:text-slate-400 mt-3 max-w-2xl mx-auto text-lg">
           {project.description}
         </p>
       </div>
@@ -36,11 +36,11 @@ const ProjectDetails = () => {
         <div className="space-y-6">
 
           {/* Overview Highlight Card */}
-          <div className="p-6 rounded-2xl bg-white dark:bg-gray-900 shadow-sm border border-gray-100 dark:border-gray-800">
-            <h2 className="text-lg font-semibold mb-2 dark:text-white">
+          <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-800">
+            <h2 className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white mb-2">
               Overview
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               {project.overview}
             </p>
           </div>
@@ -48,20 +48,20 @@ const ProjectDetails = () => {
           {/* Problem + Solution */}
           <div className="grid md:grid-cols-2 gap-6">
 
-            <div className="p-5 rounded-2xl bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/20">
-              <h3 className="font-semibold text-red-600 dark:text-red-400 mb-2">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+              <h3 className="font-semibold tracking-tight text-slate-900 dark:text-white mb-2">
                 Problem
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-sm text-slate-600 dark:text-slate-400">
                 {project.problem}
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-900/20">
-              <h3 className="font-semibold text-green-600 dark:text-green-400 mb-2">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+              <h3 className="font-semibold tracking-tight text-slate-900 dark:text-white mb-2">
                 Solution
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-sm text-slate-600 dark:text-slate-400">
                 {project.solution}
               </p>
             </div>
@@ -72,9 +72,9 @@ const ProjectDetails = () => {
           <div className="grid md:grid-cols-3 gap-4">
 
             {/* Features */}
-            <div className="p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
-              <h3 className="font-semibold mb-3 dark:text-white">Features</h3>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+            <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <h3 className="font-semibold tracking-tight text-slate-900 dark:text-white mb-3">Features</h3>
+              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 {project.features?.map((item, i) => (
                   <li key={i}>• {item}</li>
                 ))}
@@ -82,9 +82,9 @@ const ProjectDetails = () => {
             </div>
 
             {/* Challenges */}
-            <div className="p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
-              <h3 className="font-semibold mb-3 dark:text-white">Challenges</h3>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+            <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <h3 className="font-semibold tracking-tight text-slate-900 dark:text-white mb-3">Challenges</h3>
+              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 {project.challenges?.map((item, i) => (
                   <li key={i}>• {item}</li>
                 ))}
@@ -92,9 +92,9 @@ const ProjectDetails = () => {
             </div>
 
             {/* Learnings */}
-            <div className="p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
-              <h3 className="font-semibold mb-3 dark:text-white">Learnings</h3>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+            <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <h3 className="font-semibold tracking-tight text-slate-900 dark:text-white mb-3">Learnings</h3>
+              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 {project.learnings?.map((item, i) => (
                   <li key={i}>• {item}</li>
                 ))}
@@ -109,7 +109,7 @@ const ProjectDetails = () => {
         <div className="space-y-6 lg:sticky lg:top-20 h-fit">
 
           {/* Image */}
-          <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100 dark:border-gray-800">
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800">
             <img
               src={project.image}
               alt={project.name}
@@ -122,7 +122,7 @@ const ProjectDetails = () => {
             <a
               href={project.live}
               target="_blank"
-              className="flex items-center justify-center gap-2 bg-violet-600 text-white py-2 rounded-xl hover:bg-violet-700 transition"
+              className="flex items-center justify-center gap-2 bg-slate-900 text-white dark:bg-slate-50 dark:text-slate-950 font-medium py-2 rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors"
             >
               Live Demo <FaExternalLinkAlt />
             </a>
@@ -130,15 +130,15 @@ const ProjectDetails = () => {
             <a
               href={project.github}
               target="_blank"
-              className="flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-700 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white"
+              className="flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-800 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-900 dark:text-slate-50 font-medium"
             >
               GitHub <FaGithub />
             </a>
           </div>
 
           {/* Tech Stack */}
-          <div className="p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
-            <h3 className="text-lg font-semibold mb-3 dark:text-white">
+          <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <h3 className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white mb-3">
               Tech Stack
             </h3>
 
@@ -146,7 +146,7 @@ const ProjectDetails = () => {
               {project.techTags?.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-2 py-1 text-xs rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+                  className="px-2 py-1 text-xs rounded-md bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400"
                 >
                   {tech}
                 </span>

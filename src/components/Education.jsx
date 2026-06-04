@@ -14,7 +14,7 @@ const Education = () => {
       className="w-full px-[12%] py-16 scroll-mt-20"
     >
       {/* Heading */}
-      <h2 className="text-center text-4xl md:text-5xl font-Ovo dark:text-white mb-14">
+      <h2 className="text-center text-4xl font-bold md:text-5xl font-Ovo dark:text-white mb-14">
         My Journey
       </h2>
 
