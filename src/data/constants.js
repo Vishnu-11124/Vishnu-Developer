@@ -113,7 +113,7 @@ export const EXPERIENCE = [
   {
     company: "Alpha Innovation",
     role: "Web Development Intern",
-    duration: "Aug 2025 - Dec 2025",
+    duration: "Aug 2025 - Oct 2025",
     location: "Remote",
     description:
       "Worked on building and improving web applications with modern frontend and backend technologies.",
