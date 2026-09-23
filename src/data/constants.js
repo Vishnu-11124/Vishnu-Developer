@@ -106,7 +106,7 @@ export const EDUCATION = [
       "Computer Networks",
     ],
     logo: "/images/logo.jpg",
-  }
+  },
 ];
 
 export const EXPERIENCE = [
@@ -138,13 +138,73 @@ export const EXPERIENCE = [
       "Worked with API integration",
       "Participated in code reviews and debugging",
     ],
-    techStack: ["React", "JavaScript", "Tailwind CSS", "Redux Toolkit", "RTK Query"],
+    techStack: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "RTK Query",
+    ],
     logo: "/images/experience/zidio.png",
     link: "#",
   },
 ];
 
 export const PROJECTS = [
+  {
+    id: "medibook",
+    image: "/images/projects/Medibook.png",
+    name: "MediBook",
+    description:
+      "MERN-based hospital appointment platform with patient, doctor, and admin portals.",
+
+    techTags: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Razorpay",
+    ],
+
+    overview:
+      "MediBook is a full-stack hospital appointment management platform designed for small hospitals and clinics. It allows patients to book appointments while doctors and admins manage appointments, availability, and leave requests.",
+
+    problem:
+      "Small hospitals and clinics need a simple system to manage doctor availability, appointments, patient bookings, and payments digitally.",
+
+    solution:
+      "Built a role-based appointment platform with dynamic slot generation, doctor availability management, leave handling, appointment tracking, and online payment integration.",
+
+    features: [
+      "Patient, Doctor & Admin portals",
+      "JWT authentication & role-based access",
+      "Dynamic appointment slot generation",
+      "Doctor availability & leave management",
+      "Appointment history & cancellation",
+      "Razorpay online payments",
+      "Cloudinary image uploads",
+      "Responsive UI",
+    ],
+
+    challenges: [
+      "Generating appointment slots based on doctor availability",
+      "Handling booked slots and doctor leave dates",
+      "Managing authentication across different user roles",
+      "Integrating and verifying online payments",
+    ],
+
+    learnings: [
+      "Role-based authentication and authorization",
+      "Dynamic scheduling and availability logic",
+      "REST API development and integration",
+      "Razorpay payment integration",
+      "Full-stack application deployment",
+    ],
+
+    github: "https://github.com/Vishnu-11124/MediBook",
+    live: "https://medi-book-gold.vercel.app/",
+  },
   {
     id: "threadvibe",
     image: "/images/projects/ThreadVibe.png",
@@ -158,7 +218,7 @@ export const PROJECTS = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Tailwind CSS"
+      "Tailwind CSS",
     ],
 
     overview:
@@ -175,24 +235,24 @@ export const PROJECTS = [
       "Product browsing & filtering",
       "Cart management system",
       "Order tracking",
-      "Responsive UI"
+      "Responsive UI",
     ],
 
     challenges: [
       "Managing global state for cart using Redux",
       "Handling secure authentication flow",
-      "Optimizing API calls for performance"
+      "Optimizing API calls for performance",
     ],
 
     learnings: [
       "Redux state management patterns",
       "JWT authentication flow",
       "REST API design",
-      "Full-stack project architecture"
+      "Full-stack project architecture",
     ],
 
     github: "https://github.com/Vishnu-11124/ThreadVibe",
-    live: "https://thread-vibe-gamma.vercel.app/"
+    live: "https://thread-vibe-gamma.vercel.app/",
   },
 
   {
@@ -216,20 +276,15 @@ export const PROJECTS = [
     features: [
       "Task creation & deletion",
       "Task status tracking",
-      "Responsive dashboard UI"
+      "Responsive dashboard UI",
     ],
 
-    challenges: [
-      "Designing minimal UI without losing usability"
-    ],
+    challenges: ["Designing minimal UI without losing usability"],
 
-    learnings: [
-      "Next.js routing system",
-      "Component-based architecture"
-    ],
+    learnings: ["Next.js routing system", "Component-based architecture"],
 
     github: "https://github.com/Vishnu-11124/TaskFlow",
-    live: "https://task-flow-eight-rose.vercel.app/"
+    live: "https://task-flow-eight-rose.vercel.app/",
   },
 
   {
@@ -254,19 +309,14 @@ export const PROJECTS = [
       "Product search & filtering",
       "Wishlist system",
       "Cart management",
-      "Responsive design"
+      "Responsive design",
     ],
 
-    challenges: [
-      "Managing UI state for cart and wishlist"
-    ],
+    challenges: ["Managing UI state for cart and wishlist"],
 
-    learnings: [
-      "React state management",
-      "Component reusability"
-    ],
+    learnings: ["React state management", "Component reusability"],
 
     github: "https://github.com/Vishnu-11124/Kicko",
-    live: "https://kicko-7dsr.vercel.app/"
-  }
+    live: "https://kicko-7dsr.vercel.app/",
+  },
 ];
