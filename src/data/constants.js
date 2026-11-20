@@ -11,6 +11,7 @@ import {
   SiMysql,
   SiPostman,
   SiShadcnui,
+  SiDocker,
 } from "react-icons/si";
 
 import {
@@ -67,6 +68,8 @@ export const SKILL_CATEGORIES = [
       { name: "Python", icon: FaPython },
       { name: "MongoDB", icon: SiMongodb },
       { name: "MySQL", icon: SiMysql },
+      { name: "Docker", icon: SiDocker },
+      { name: "Docker Compose", icon: SiDocker },
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
       { name: "Postman", icon: SiPostman },
