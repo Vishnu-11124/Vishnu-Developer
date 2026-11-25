@@ -10,14 +10,14 @@ const Hero = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
                 src="/images/vishnu.jpg"
-                className="rounded-full w-32 object-cover"
+                className="rounded-full w-32 object-cover border-2 border-midnight-border"
                 alt="Vishnu"
             />
             <motion.h3 
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex items-center gap-2 text-xl md:text-2xl mb-3 text-slate-600 dark:text-slate-300 tracking-tight"
+                className="flex items-center gap-2 text-xl md:text-2xl mb-3 text-midnight-accent font-medium tracking-tight"
             >
                 Hi! I'm Vishnu T S
             </motion.h3>
@@ -25,7 +25,7 @@ const Hero = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-5xl md:text-7xl font-bold tracking-tighter text-slate-900 dark:text-white"
+                className="text-5xl md:text-7xl font-bold tracking-tighter text-midnight-text"
             >
                 Frontend Developer
             </motion.h1>
@@ -33,7 +33,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="max-w-2xl mx-auto text-slate-500 dark:text-slate-400 text-lg leading-relaxed"
+                className="max-w-2xl mx-auto text-midnight-muted text-lg leading-relaxed"
             >
                 I build responsive, user-friendly web applications using React.js, TypeScript, Next.js, Tailwind CSS, and MERN stack technologies.
             </motion.p>
@@ -48,7 +48,7 @@ const Hero = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href="#contact"
-                    className="px-8 py-3 rounded-lg bg-slate-900 text-white dark:bg-slate-50 dark:text-slate-950 font-medium hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors"
+                    className="px-8 py-3 rounded-lg bg-midnight-accent text-midnight-bg font-semibold hover:bg-midnight-accent-hover transition-colors"
                 >
                     Contact Me
                 </motion.a>
@@ -57,7 +57,7 @@ const Hero = () => {
                     whileTap={{ scale: 0.95 }}
                     href="/docs/Vishnu_TS_MERN_Stack_Developer_Resume.pdf"
                     download
-                    className="px-8 py-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-transparent text-slate-900 dark:text-slate-50 font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                    className="px-8 py-3 rounded-lg border border-midnight-border bg-midnight-card text-midnight-text font-medium hover:bg-midnight-surface hover:border-midnight-accent transition-colors"
                 >
                     Download CV
                 </motion.a>

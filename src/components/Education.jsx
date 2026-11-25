@@ -14,13 +14,13 @@ const Education = () => {
       className="w-full px-[12%] py-16 scroll-mt-20"
     >
       {/* Heading */}
-      <h2 className="text-center text-4xl font-bold md:text-5xl font-Ovo dark:text-white mb-14">
+      <h2 className="text-center text-4xl font-bold md:text-5xl font-Ovo text-midnight-text mb-14">
         My Journey
       </h2>
 
       <div className="max-w-5xl mx-auto relative">
         {/* Timeline line */}
-        <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-gray-200 dark:bg-gray-700 -translate-x-1/2" />
+        <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-midnight-border -translate-x-1/2" />
 
         <div className="flex flex-col gap-12">
           {EDUCATION.map((edu, index) => (
@@ -37,51 +37,48 @@ const Education = () => {
               }`}
             >
               {/* Timeline dot */}
-              <div className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-gray-900" />
+              <div className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-midnight-accent border-4 border-midnight-bg" />
 
               {/* Card */}
               <div className="group w-full md:w-[48%] relative">
-                {/* Glow border */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
-
-                <div className="relative bg-white dark:bg-gray-900 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div className="relative bg-midnight-card border border-midnight-border rounded-2xl p-6 md:p-8 group-hover:border-midnight-accent/60 group-hover:-translate-y-1 transition-all duration-300">
 
                   {/* Top */}
                   <div className="flex items-start gap-4 mb-4">
                     <img
                       src={edu.logo}
                       alt={edu.institution}
-                      className="w-12 h-12 rounded-full object-cover border border-gray-200 dark:border-gray-700"
+                      className="w-12 h-12 rounded-full object-cover border border-midnight-border bg-midnight-surface"
                     />
 
                     <div>
-                      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                      <h3 className="text-lg font-bold text-midnight-text">
                         {edu.degree}
                       </h3>
 
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                      <p className="text-sm text-midnight-muted">
                         {edu.college}
                       </p>
 
-                      <p className="text-xs text-gray-400">
+                      <p className="text-xs text-midnight-muted/80">
                         {edu.institution}
                       </p>
                     </div>
                   </div>
 
                   {/* Duration */}
-                  <span className="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-300">
+                  <span className="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full bg-midnight-surface border border-midnight-border text-midnight-accent">
                     {edu.duration}
                   </span>
 
                   {/* Description */}
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-sm text-midnight-muted mb-4 leading-relaxed">
                     {edu.description}
                   </p>
 
                   {/* Highlights */}
                   <div className="mb-4">
-                    <p className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">
+                    <p className="text-xs font-semibold text-midnight-muted mb-2 uppercase tracking-wide">
                       Highlights
                     </p>
 
@@ -89,7 +86,7 @@ const Education = () => {
                       {edu.highlights.map((item, i) => (
                         <span
                           key={i}
-                          className="px-2 py-1 text-xs rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+                          className="px-2 py-1 text-xs rounded-md bg-midnight-surface border border-midnight-border text-midnight-muted"
                         >
                           {item}
                         </span>
@@ -98,8 +95,8 @@ const Education = () => {
                   </div>
 
                   {/* Location */}
-                  <div className="flex items-center gap-2 text-xs text-gray-400">
-                    <FaMapMarkerAlt />
+                  <div className="flex items-center gap-2 text-xs text-midnight-muted">
+                    <FaMapMarkerAlt className="text-midnight-accent" />
                     {edu.location}
                   </div>
                 </div>

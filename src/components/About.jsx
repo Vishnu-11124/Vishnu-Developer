@@ -13,11 +13,11 @@ const About = () => {
     >
       {/* Section Heading */}
       <div className="text-center mb-12">
-        <p className="text-sm font-semibold tracking-[0.25em] uppercase text-slate-500 dark:text-slate-400 mb-3">
+        <p className="text-sm font-semibold tracking-[0.25em] uppercase text-midnight-accent mb-3">
           Get to Know Me
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-midnight-text">
           About Me
         </h2>
       </div>
@@ -30,11 +30,11 @@ const About = () => {
         viewport={{ once: true }}
         className="max-w-4xl mx-auto flex flex-col gap-6"
       >
-        <h3 className="text-2xl md:text-3xl font-semibold leading-snug text-slate-900 dark:text-slate-50">
+        <h3 className="text-2xl md:text-3xl font-semibold leading-snug text-midnight-text">
           Turning ideas into meaningful digital experiences through code.
         </h3>
 
-        <p className="text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="text-base md:text-lg leading-relaxed text-midnight-muted">
           I'm a passionate Full Stack Developer who enjoys building modern,
           responsive, and user-friendly web applications. With hands-on
           experience in the MERN stack and modern frontend technologies, I focus
@@ -42,7 +42,7 @@ const About = () => {
           backend systems.
         </p>
 
-        <p className="text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="text-base md:text-lg leading-relaxed text-midnight-muted">
           Through internships and personal projects, I've gained practical
           experience in developing REST APIs, implementing authentication,
           managing application state, integrating databases, and building
@@ -51,7 +51,7 @@ const About = () => {
           write and structure code.
         </p>
 
-        <p className="text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="text-base md:text-lg leading-relaxed text-midnight-muted">
           Currently, I'm expanding my knowledge of Next.js, TypeScript, Prisma,
           and backend technologies while strengthening my problem-solving
           skills. I'm always excited to take on new challenges, collaborate with
@@ -62,7 +62,7 @@ const About = () => {
         <div className="mt-9 pl-5 md:pl-7">
           <a
             href="#contact"
-            className="group inline-flex items-center gap-3 rounded-full bg-slate-900 dark:bg-white px-6 py-3 text-sm font-semibold text-white dark:text-slate-900 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            className="group inline-flex items-center gap-3 rounded-full bg-midnight-accent px-6 py-3 text-sm font-semibold text-midnight-bg hover:bg-midnight-accent-hover hover:-translate-y-1 transition-all duration-300"
           >
             Let's Work Together
             <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">

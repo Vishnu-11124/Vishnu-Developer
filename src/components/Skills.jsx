@@ -17,61 +17,28 @@ const pillVariants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
 };
 
-const themeClasses = {
-  violet: {
-    dot: "bg-violet-500 dark:bg-violet-400",
-    label: "text-violet-600 dark:text-violet-400",
-    icon: "text-violet-600 dark:text-violet-400",
-    pill: "bg-violet-50 dark:bg-violet-950/40 border-violet-200 dark:border-violet-800/50 text-violet-800 dark:text-violet-300 hover:border-violet-400 dark:hover:border-violet-500",
-  },
-  blue: {
-    dot: "bg-blue-500 dark:bg-blue-400",
-    label: "text-blue-600 dark:text-blue-400",
-    icon: "text-blue-600 dark:text-blue-400",
-    pill: "bg-blue-50 dark:bg-blue-950/40 border-blue-200 dark:border-blue-800/50 text-blue-800 dark:text-blue-300 hover:border-blue-400 dark:hover:border-blue-500",
-  },
-  emerald: {
-    dot: "bg-emerald-500 dark:bg-emerald-400",
-    label: "text-emerald-600 dark:text-emerald-400",
-    icon: "text-emerald-600 dark:text-emerald-400",
-    pill: "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-300 hover:border-emerald-400 dark:hover:border-emerald-500",
-  },
-  orange: {
-    dot: "bg-orange-500 dark:bg-orange-400",
-    label: "text-orange-600 dark:text-orange-400",
-    icon: "text-orange-600 dark:text-orange-400",
-    pill: "bg-orange-50 dark:bg-orange-950/40 border-orange-200 dark:border-orange-800/50 text-orange-800 dark:text-orange-300 hover:border-orange-400 dark:hover:border-orange-500",
-  },
-};
-
-const SkillPill = ({ skill, theme }) => {
-  const t = themeClasses[theme];
-
+const SkillPill = ({ skill }) => {
   return (
     <motion.div
       variants={pillVariants}
       whileHover={{ y: -2 }}
-      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[10px] text-[13px] cursor-default border transition-all duration-150 ${t.pill}`}
+      className="flex items-center gap-1.5 px-3 py-1.5 rounded-[10px] text-[13px] cursor-default border border-midnight-border bg-midnight-surface text-midnight-text hover:border-midnight-accent transition-all duration-150"
     >
-      <skill.icon size={14} className={`shrink-0 ${t.icon}`} />
+      <skill.icon size={14} className="shrink-0 text-midnight-accent" />
       {skill.name}
     </motion.div>
   );
 };
 
 const SkillCard = ({ cat }) => {
-  const t = themeClasses[cat.theme];
-
   return (
     <motion.div
       variants={cardVariants}
-      className="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300"
+      className="rounded-2xl p-5 border border-midnight-border bg-midnight-card hover:border-midnight-accent/60 hover:-translate-y-1 transition-all duration-300"
     >
       <div className="flex items-center gap-2 mb-4">
-        <div className={`w-2 h-2 rounded-full shrink-0 ${t.dot}`} />
-        <h3
-          className={`text-[14px] font-medium tracking-[0.1em] uppercase ${t.label}`}
-        >
+        <div className="w-2 h-2 rounded-full shrink-0 bg-midnight-accent" />
+        <h3 className="text-[14px] font-medium tracking-[0.1em] uppercase text-midnight-accent">
           {cat.category}
         </h3>
       </div>
@@ -84,7 +51,7 @@ const SkillCard = ({ cat }) => {
         className="flex flex-wrap gap-2"
       >
         {cat.skills.map((skill) => (
-          <SkillPill key={skill.name} skill={skill} theme={cat.theme} />
+          <SkillPill key={skill.name} skill={skill} />
         ))}
       </motion.div>
     </motion.div>
@@ -100,15 +67,15 @@ const Skills = () => (
     viewport={{ once: true }}
     className="w-full px-[6%] md:px-[12%] py-16 scroll-mt-20"
   >
-    <p className="text-center text-sm font-semibold tracking-widest uppercase text-slate-500 dark:text-slate-500 mb-2">
+    <p className="text-center text-sm font-semibold tracking-widest uppercase text-midnight-accent mb-2">
       My Arsenal
     </p>
 
-    <h2 className="text-center text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
+    <h2 className="text-center text-4xl md:text-5xl font-bold tracking-tight text-midnight-text mb-2">
       Skills & Tools
     </h2>
 
-    <p className="text-center text-sm text-slate-500 dark:text-slate-400 mb-12">
+    <p className="text-center text-sm text-midnight-muted mb-12">
       Organized by what I actually use to build things.
     </p>
 
@@ -129,7 +96,7 @@ const Skills = () => (
       whileInView="visible"
       transition={{ duration: 0.8, delay: 0.4 }}
       viewport={{ once: true }}
-      className="text-center text-sm text-slate-400 dark:text-slate-500 mt-10 tracking-wide"
+      className="text-center text-sm text-midnight-muted mt-10 tracking-wide"
     >
       Constantly learning and expanding my toolset...
     </motion.p>

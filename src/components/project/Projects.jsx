@@ -25,13 +25,13 @@ const Projects = () => {
       viewport={{ once: true }}
       className="w-full px-[5%] md:px-[8%] py-16 scroll-mt-20"
     >
-      <p className="text-center text-sm font-semibold tracking-widest uppercase text-slate-500 dark:text-slate-500 mb-2">
+      <p className="text-center text-sm font-semibold tracking-widest uppercase text-midnight-accent mb-2">
         My Portfolio
       </p>
-      <h2 className="text-center text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-3">
+      <h2 className="text-center text-4xl md:text-5xl font-bold tracking-tight text-midnight-text mb-3">
         My Latest Works
       </h2>
-      <p className="text-center text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-12">
+      <p className="text-center text-sm text-midnight-muted max-w-md mx-auto mb-12">
         Projects showcasing my expertise in full-stack development.
       </p>
 
@@ -45,17 +45,17 @@ const Projects = () => {
             whileInView="visible"
             viewport={{ once: true }}
             whileHover={{ y: -4 }}
-            className="group flex flex-col rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300"
+            className="group flex flex-col rounded-2xl overflow-hidden border border-midnight-border bg-midnight-card hover:border-midnight-accent/60 hover:-translate-y-1 transition-all duration-300"
           >
             {/* Image */}
-            <div className="relative h-44 overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0">
+            <div className="relative h-44 overflow-hidden bg-midnight-surface flex-shrink-0">
               <img
                 loading="lazy"
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-midnight-bg/90 via-midnight-bg/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               {/* Hover icon links */}
               <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                 <a
@@ -64,7 +64,7 @@ const Projects = () => {
                   rel="noreferrer"
                   title="View Code"
                   onClick={(e) => e.stopPropagation()}
-                  className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-gray-700 hover:scale-110 transition-transform"
+                  className="w-8 h-8 rounded-full bg-midnight-surface border border-midnight-border flex items-center justify-center text-midnight-text hover:bg-midnight-accent hover:text-midnight-bg hover:border-midnight-accent hover:scale-110 transition-all"
                 >
                   <FiGithub size={14} />
                 </a>
@@ -74,7 +74,7 @@ const Projects = () => {
                   rel="noreferrer"
                   title="Live Demo"
                   onClick={(e) => e.stopPropagation()}
-                  className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-gray-700 hover:scale-110 transition-transform"
+                  className="w-8 h-8 rounded-full bg-midnight-surface border border-midnight-border flex items-center justify-center text-midnight-text hover:bg-midnight-accent hover:text-midnight-bg hover:border-midnight-accent hover:scale-110 transition-all"
                 >
                   <FiExternalLink size={14} />
                 </a>
@@ -83,21 +83,21 @@ const Projects = () => {
 
             {/* Body */}
             <div className="flex flex-col flex-1 p-5">
-              <h3 className="text-lg font-semibold tracking-tight text-slate-900 dark:text-slate-50 mb-1.5 leading-snug">
+              <h3 className="text-lg font-semibold tracking-tight text-midnight-text mb-1.5 leading-snug">
                 {project.title}
               </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1 mb-4">
+              <p className="text-sm text-midnight-muted leading-relaxed line-clamp-3 flex-1 mb-4">
                 {project.description}
               </p>
 
               {/* Footer */}
-              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 mt-auto flex justify-center">
+              <div className="pt-3 border-t border-midnight-border mt-auto flex justify-center">
                 <button
                   onClick={() => {
                     navigate(`/projects/${project.id}`);
                     window.scrollTo(0, 0);
                   }}
-                  className="group relative inline-flex items-center gap-2 px-6 py-2 text-sm font-medium bg-slate-900 dark:bg-slate-50 text-white dark:text-slate-950 rounded-lg hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors shadow-sm"
+                  className="group relative inline-flex items-center gap-2 px-6 py-2 text-sm font-semibold bg-midnight-accent text-midnight-bg rounded-lg hover:bg-midnight-accent-hover transition-colors"
                 >
                   View Details
                 </button>
