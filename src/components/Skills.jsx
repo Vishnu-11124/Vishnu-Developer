@@ -6,10 +6,12 @@ const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 };
+
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
+
 const pillVariants = {
   hidden: { opacity: 0, scale: 0.88 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
@@ -34,10 +36,17 @@ const themeClasses = {
     icon: "text-emerald-600 dark:text-emerald-400",
     pill: "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-300 hover:border-emerald-400 dark:hover:border-emerald-500",
   },
+  orange: {
+    dot: "bg-orange-500 dark:bg-orange-400",
+    label: "text-orange-600 dark:text-orange-400",
+    icon: "text-orange-600 dark:text-orange-400",
+    pill: "bg-orange-50 dark:bg-orange-950/40 border-orange-200 dark:border-orange-800/50 text-orange-800 dark:text-orange-300 hover:border-orange-400 dark:hover:border-orange-500",
+  },
 };
 
 const SkillPill = ({ skill, theme }) => {
   const t = themeClasses[theme];
+
   return (
     <motion.div
       variants={pillVariants}
@@ -52,6 +61,7 @@ const SkillPill = ({ skill, theme }) => {
 
 const SkillCard = ({ cat }) => {
   const t = themeClasses[cat.theme];
+
   return (
     <motion.div
       variants={cardVariants}
@@ -59,10 +69,13 @@ const SkillCard = ({ cat }) => {
     >
       <div className="flex items-center gap-2 mb-4">
         <div className={`w-2 h-2 rounded-full shrink-0 ${t.dot}`} />
-        <h3 className={`text-[14px] font-medium tracking-[0.1em] uppercase ${t.label}`}>
+        <h3
+          className={`text-[14px] font-medium tracking-[0.1em] uppercase ${t.label}`}
+        >
           {cat.category}
         </h3>
       </div>
+
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -90,9 +103,11 @@ const Skills = () => (
     <p className="text-center text-sm font-semibold tracking-widest uppercase text-slate-500 dark:text-slate-500 mb-2">
       My Arsenal
     </p>
+
     <h2 className="text-center text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
       Skills & Tools
     </h2>
+
     <p className="text-center text-sm text-slate-500 dark:text-slate-400 mb-12">
       Organized by what I actually use to build things.
     </p>
@@ -102,19 +117,16 @@ const Skills = () => (
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="flex flex-col gap-3.5 max-w-4xl mx-auto"
+      className="grid grid-cols-1 md:grid-cols-2 gap-3.5 max-w-4xl mx-auto"
     >
-      <SkillCard cat={SKILL_CATEGORIES[0]} />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-        {SKILL_CATEGORIES.slice(1).map((cat) => (
-          <SkillCard key={cat.category} cat={cat} />
-        ))}
-      </div>
+      {SKILL_CATEGORIES.map((cat) => (
+        <SkillCard key={cat.category} cat={cat} />
+      ))}
     </motion.div>
 
     <motion.p
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      whileInView="visible"
       transition={{ duration: 0.8, delay: 0.4 }}
       viewport={{ once: true }}
       className="text-center text-sm text-slate-400 dark:text-slate-500 mt-10 tracking-wide"
